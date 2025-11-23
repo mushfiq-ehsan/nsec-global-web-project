@@ -198,70 +198,92 @@ export default function StudyDestinations() {
         </div>
       </div>
 
-      <div className="w-full bg-gray-50 py-16">
-        <h2 className="text-4xl font-bold text-center text-blue-700 mb-12">
-          Top Universities in United Kingdom
-        </h2>
 
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 px-4">
-          {universities.map((u, index) => (
-            <div
-              key={index}
-              className="bg-white shadow-md rounded-xl p-6 border border-gray-200"
+      {/* ================= TOP UNIVERSITIES ================= */}
+<div className="w-full bg-gray-50 py-16">
+  <h2 className="text-4xl font-bold text-center text-blue-700 mb-12">
+    Top Universities in United Kingdom
+  </h2>
+
+  <div className="max-w-7xl mx-auto grid sm:grid-cols-1 md:grid-cols-2 gap-8 px-4">
+    {universities.map((u, index) => (
+      <div
+        key={index}
+        className="bg-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl p-6 border border-gray-100"
+      >
+        {/* Header */}
+        <div className="flex justify-between items-center mb-4">
+          <h3 className="text-lg sm:text-xl font-bold text-gray-800">{u.name}</h3>
+          <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
+            {u.rank}
+          </span>
+        </div>
+
+        {/* Location */}
+        <div className="flex items-center gap-2 text-gray-600 mb-4">
+          <FaMapMarkerAlt className="text-blue-600 text-lg" />
+          <p className="text-sm sm:text-base">{u.location}</p>
+        </div>
+
+        {/* Programs */}
+        <p className="text-gray-700 font-semibold mb-2">Popular Programs:</p>
+        <div className="flex flex-wrap gap-2 mb-6">
+          {u.programs.map((p, i) => (
+            <span
+              key={i}
+              className="bg-blue-50 text-blue-700 px-3 py-1 rounded-md text-xs sm:text-sm"
             >
-              <div className="flex justify-between items-center mb-3">
-                <h3 className="text-xl font-semibold">{u.name}</h3>
-                <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">
-                  {u.rank}
-                </span>
-              </div>
-
-              <div className="flex items-center gap-2 text-gray-600 mb-4">
-                <FaMapMarkerAlt className="text-blue-600" />
-                <p>{u.location}</p>
-              </div>
-
-              <p className="text-gray-700 font-medium mb-2">
-                Popular Programs:
-              </p>
-              <div className="flex flex-wrap gap-2 mb-6">
-                {u.programs.map((p, i) => (
-                  <span
-                    key={i}
-                    className="bg-blue-50 text-blue-700 px-3 py-1 rounded-md text-sm"
-                  >
-                    {p}
-                  </span>
-                ))}
-              </div>
-
-              <div className="flex gap-4">
-                <button className="btn btn-outline w-full">View Details</button>
-                <button className="btn btn-primary w-full">Apply Now</button>
-              </div>
-            </div>
+              {p}
+            </span>
           ))}
         </div>
 
-        {/* CTA Section */}
-        <div className="bg-blue-600 text-white rounded-xl max-w-7xl mx-auto mt-20 p-10 text-center">
-          <h2 className="text-3xl font-bold mb-3">Ready to Apply?</h2>
-          <p className="max-w-2xl mx-auto text-lg opacity-90 mb-6">
-            Our expert counselors will help you choose the right university and
-            guide you through the entire application process.
-          </p>
-
-          <div className="flex justify-center gap-6">
-            <button className="btn bg-yellow-400 border-none text-black px-8 text-lg">
-              Book Free Consultation
-            </button>
-
-            <button className="btn btn-outline text-white border-white px-8 text-lg">
-              Download University Guide
-            </button>
-          </div>
+        {/* Buttons */}
+        <div className="grid grid-cols-2 gap-4">
+          <button className="btn btn-outline btn-sm sm:btn-md w-full">
+            View Details
+          </button>
+          <button className="btn btn-primary btn-sm sm:btn-md w-full">
+            Apply Now
+          </button>
         </div>
       </div>
+    ))}
+  </div>
+
+  {/* CTA SECTION */}
+  <div className="bg-blue-600 text-white rounded-xl max-w-7xl mx-auto mt-20 p-10 text-center shadow-lg">
+    <h2 className="text-3xl font-bold mb-3">Ready to Apply?</h2>
+    <p className="max-w-2xl mx-auto text-lg opacity-90 mb-6">
+      Our expert counselors will help you choose the right university and guide
+      you through the entire application process.
+    </p>
+
+    <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 mt-6 w-full">
+
+  {/* Consultation Button */}
+  <button
+    className="w-full sm:w-auto btn bg-yellow-400 text-black border-none 
+    px-6 sm:px-8 py-3 text-base sm:text-lg rounded-lg font-semibold
+    hover:bg-yellow-300 transition-all duration-300"
+  >
+    Book Free Consultation
+  </button>
+
+  {/* Guide Button */}
+  <button
+    className="w-full sm:w-auto btn border border-white 
+    px-6 sm:px-8 py-3 text-base sm:text-lg rounded-lg font-semibold
+    hover:bg-white hover:text-blue-700 transition-all duration-300"
+  >
+    Download University Guide
+  </button>
+
+</div>
+
+  </div>
+</div>
+
     </div>
   );
 }
