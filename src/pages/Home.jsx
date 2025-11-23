@@ -1,8 +1,7 @@
 import React from 'react';
 import Banner from '../Components/Banner';
 import { FaUniversity, FaPassport, FaFileAlt, FaUserTie } from "react-icons/fa";
-import Marquee from "react-fast-marquee";
-
+import { FiPhone } from "react-icons/fi";
 
 const Home = () => {
 
@@ -183,6 +182,39 @@ const Home = () => {
       </div>
     </section>
       </div>
+
+
+
+
+      <section>
+        <div className="bg-[#2F37B4] text-white py-20 flex flex-col items-center text-center px-4">
+      <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        Ready to Start Your Journey?
+      </h2>
+
+      <p className="text-lg md:text-xl max-w-2xl mb-8">
+        Take the first step towards your international education dreams. 
+        Our expert counselors are here to guide you every step of the way.
+      </p>
+
+      <div className="flex flex-col md:flex-row gap-4">
+        {/* Book Free Consultation Button */}
+        <button className="btn bg-[#5364F5] text-white border-none px-8 py-3 rounded-lg hover:bg-[#4152d9]">
+          Book Free Consultation
+        </button>
+
+        {/* Call Now Button */}
+        <a
+          href="tel:01805021560"
+          className="btn bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg 
+                     hover:bg-white hover:text-[#2F37B4] transition-all duration-200 flex items-center gap-2"
+        >
+          <FiPhone size={18} />
+          Call Now: 01805-021560
+        </a>
+      </div>
+    </div>
+      </section>
 
             
         </div>
