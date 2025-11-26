@@ -45,7 +45,7 @@ const About = () => {
       {/* Our Story */}
       <div>
         {/* HERO SECTION */}
-        <section className="bg-[#3a367c] text-white py-20 text-center px-4">
+        <section className="bg-[#002060] text-white py-20 text-center px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             About NSEC Global
           </h1>
@@ -109,7 +109,7 @@ const About = () => {
             <img
               src="/IMG20250718185756.jpg"
               alt="NSEC Global Office"
-              className="rounded-xl shadow-xl w-full max-w-[520px] object-cover"
+              className="rounded-xl shadow-xl w-full max-w-[520px] h-100 object-cover"
             />
           </div>
         </section>

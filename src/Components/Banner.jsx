@@ -49,13 +49,8 @@ const Banner = () => {
 
                   {/* BUTTONS */}
                   <div className="mt-5 flex flex-wrap gap-3 sm:gap-4">
-                    <button className="btn btn-primary px-4 sm:px-6 text-white">
+                    <button className="btn bg-[#002060] text-white hover:bg-[#9b1a1a] hover:text-white rounded-md px-8">
                       Start Your Journey
-                    </button>
-
-                    <button className="btn btn-outline text-white border-white hover:bg-white hover:text-blue-900 flex items-center">
-                      <FaPlay className="mr-2" />
-                      Watch Our Story
                     </button>
                   </div>
 

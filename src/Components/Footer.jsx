@@ -1,11 +1,11 @@
 import React from 'react';
-import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube, FaPhoneAlt } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube, FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
 
 const Footer = () => {
     return (
-         <footer className="bg-[#0A2A8C] text-white py-12 px-6">
+         <footer className="bg-black text-white py-12 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
 
         {/* Logo + Description */}
@@ -20,8 +20,8 @@ const Footer = () => {
           <div className="flex gap-4 mt-4 text-xl">
             <FaFacebook className="hover:text-gray-300 cursor-pointer" />
             <FaInstagram className="hover:text-gray-300 cursor-pointer" />
-            <FaLinkedin className="hover:text-gray-300 cursor-pointer" />
-            <FaYoutube className="hover:text-gray-300 cursor-pointer" />
+            <FaWhatsapp className="hover:text-gray-300 cursor-pointer" />
+            
           </div>
         </div>
 
@@ -55,15 +55,15 @@ const Footer = () => {
             <li className="flex items-start gap-2">
               <IoLocationSharp className="text-lg mt-1" />
               <span>
-                4 Chowdhury Para, 017 Rd  
+                4 Chowdhury Para, DIT Rd  
                 Dhaka 1219, Bangladesh
               </span>
             </li>
             <li className="flex items-center gap-2">
-              <FaPhoneAlt /> 01865-821580
+              <FaPhoneAlt />+880 1865821580
             </li>
             <li className="flex items-center gap-2">
-              <MdEmail /> info@nmecglobal.com
+              <MdEmail /> nsecglobal@gmail.com
             </li>
           </ul>
         </div>
@@ -71,7 +71,7 @@ const Footer = () => {
 
       {/* Divider */}
       <div className="border-t border-gray-500 mt-10 pt-4 flex justify-between text-xs text-gray-300 max-w-7xl mx-auto">
-        <p>© 2025 NMEC Global. All rights reserved.</p>
+        <p>© 2025 NSEC Global. All rights reserved.</p>
         <p>Powered by Readify</p>
       </div>
     </footer>

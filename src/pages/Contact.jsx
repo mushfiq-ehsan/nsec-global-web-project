@@ -26,7 +26,7 @@ export default function Contact() {
             </div>
           </div>
           <h3 className="text-lg font-semibold mb-1">Phone</h3>
-          <p className="text-gray-600">+1 (555) 123-4567</p>
+          <p className="text-gray-600">+880 1865821580</p>
         </div>
 
         {/* Email */}
@@ -37,7 +37,7 @@ export default function Contact() {
             </div>
           </div>
           <h3 className="text-lg font-semibold mb-1">Email</h3>
-          <p className="text-gray-600">info@nsecglobal.com</p>
+          <p className="text-gray-600">nsecglobal@gmail.com</p>
         </div>
 
         {/* Address */}
@@ -49,7 +49,7 @@ export default function Contact() {
           </div>
           <h3 className="text-lg font-semibold mb-1">Address</h3>
           <p className="text-gray-600">
-            123 Education Street, Global City, GC 12345
+            4 Chowdhury Para, DIT Rd Dhaka 1219, Bangladesh
           </p>
         </div>
 
@@ -61,7 +61,7 @@ export default function Contact() {
             </div>
           </div>
           <h3 className="text-lg font-semibold mb-1">Working Hours</h3>
-          <p className="text-gray-600">Mon - Fri: 9:00 AM - 6:00 PM</p>
+          <p className="text-gray-600">Sat - Thu: 10:00 AM - 6:30 PM</p>
         </div>
       </div>
 
@@ -156,19 +156,19 @@ export default function Contact() {
           {/* OFFICE LIST */}
           <div className="mt-6 space-y-6 ">
 
-            {/* New York */}
+            {/* Dhaka Office */}
             <div className="bg-base-100 p-6 rounded-xl shadow-md">
-              <h3 className="font-semibold text-lg mb-3">New York Office</h3>
+              <h3 className="font-semibold text-lg mb-3">Dhaka Office</h3>
               <div className="space-y-2 text-gray-600">
                 <p className="flex gap-2 items-start">
                   <PiMapPinLight className="text-xl" />
-                  123 Education Street, New York, NY 10001
+                  4 Chowdhury Para, DIT Rd Dhaka 1219, Bangladesh
                 </p>
                 <p className="flex gap-2 items-center">
-                  <FiPhone /> +1 (555) 123-4567
+                  <FiPhone /> +880 1865821580
                 </p>
                 <p className="flex gap-2 items-center">
-                  <FiMail /> newyork@nsecglobal.com
+                  <FiMail /> nsecglobal@gmail.com
                 </p>
               </div>
             </div>

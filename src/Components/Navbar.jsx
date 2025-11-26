@@ -1,5 +1,9 @@
 import React from "react";
+import { GrWorkshop } from "react-icons/gr";
+import { IoMdPeople } from "react-icons/io";
 import { IoHomeOutline } from "react-icons/io5";
+import { LuPlane } from "react-icons/lu";
+import { MdPermContactCalendar } from "react-icons/md";
 import { RiServiceLine } from "react-icons/ri";
 import { NavLink } from "react-router";
 
@@ -11,7 +15,7 @@ const Navbar = () => {
         className={({ isActive }) =>
           `mr-2 p-2 transition-all  duration-10 ${
             isActive
-              ? " border-b-2 border-[#c67033]"
+              ? " border-b-2 border-[#9b1a1a]"
               : ""
           }`
         }
@@ -28,7 +32,7 @@ const Navbar = () => {
         className={({ isActive }) =>
           `mr-2 p-2  transition-all  duration-10 ${
             isActive
-              ? " border-b-2 border-[#c67033]"
+              ? " border-b-2 border-[#9b1a1a]"
               : ""
           }`
         }
@@ -36,14 +40,14 @@ const Navbar = () => {
       >
         {" "}
         <div className="flex items-center gap-1">
-          <RiServiceLine />About{" "}
+          <IoMdPeople />About{" "}
         </div>{" "}
       </NavLink>
       <NavLink
         className={({ isActive }) =>
           `mr-2 p-2  transition-all  duration-10 ${
             isActive
-              ? " border-b-2 border-[#c67033]"
+              ? " border-b-2 border-[#9b1a1a]"
               : ""
           }`
         }
@@ -51,14 +55,14 @@ const Navbar = () => {
       >
         {" "}
         <div className="flex items-center gap-1">
-          <RiServiceLine />Services{" "}
+          <GrWorkshop />Services{" "}
         </div>{" "}
       </NavLink>
       <NavLink
         className={({ isActive }) =>
           `mr-2 p-2  transition-all  duration-10 ${
             isActive
-              ? " border-b-2 border-[#c67033]"
+              ? " border-b-2 border-[#9b1a1a]"
               : ""
           }`
         }
@@ -66,14 +70,14 @@ const Navbar = () => {
       >
         {" "}
         <div className="flex items-center gap-1">
-          <RiServiceLine />Study Destinations{" "}
+          <LuPlane />Destinations{" "}
         </div>{" "}
       </NavLink>
       <NavLink
         className={({ isActive }) =>
           `mr-2 p-2  transition-all  duration-10 ${
             isActive
-              ? " border-b-2 border-[#c67033]"
+              ? " border-b-2 border-[#9b1a1a]"
               : ""
           }`
         }
@@ -81,7 +85,7 @@ const Navbar = () => {
       >
         {" "}
         <div className="flex items-center gap-1">
-          <RiServiceLine />Contact{" "}
+          <MdPermContactCalendar />Contact Us{" "}
         </div>{" "}
       </NavLink>
     </>
@@ -141,7 +145,7 @@ const Navbar = () => {
 
         {/* Right Button */}
         <div className="navbar-end">
-          <a className="btn btn-sm md:btn-md bg-[#323db8] text-white">
+          <a className="btn btn-sm md:btn-md bg-[#9b1a1a] rounded-md text-white">
             Book Appointment
           </a>
         </div>
