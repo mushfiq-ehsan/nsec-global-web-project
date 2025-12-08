@@ -1,62 +1,49 @@
 import { useState } from "react";
-import { FaUniversity, FaBookOpen, FaUserGraduate, FaMapMarkerAlt } from "react-icons/fa";
+import {
+  FaUniversity,
+  FaBookOpen,
+  FaUserGraduate,
+  FaMapMarkerAlt,
+  FaUmbrellaBeach,
+  FaHome,
+  FaBus,
+  FaHospital,
+  FaShoppingCart,
+  FaShieldAlt,
+  FaGlobe,
+} from "react-icons/fa";
+import { FiPhone } from "react-icons/fi";
 
 export default function StudyDestinations() {
-  const [active, setActive] = useState("UK");
+  const [tab, setTab] = useState("students");
+  const [activeStudent, setActiveStudent] = useState("UK");
+  const [activeTourist, setActiveTourist] = useState("USA");
 
   const universities = [
     {
-      rank: "#1 in UK",
       name: "University of Oxford",
       location: "Oxford",
       programs: ["Medicine", "Law", "Engineering", "Business"],
     },
     {
-      rank: "#2 in UK",
       name: "University of Cambridge",
       location: "Cambridge",
-      programs: [
-        "Computer Science",
-        "Mathematics",
-        "Natural Sciences",
-        "Economics",
-      ],
+      programs: ["Computer Science", "Mathematics", "Natural Sciences", "Economics"],
     },
     {
-      rank: "#3 in UK",
       name: "Imperial College London",
       location: "London",
       programs: ["Engineering", "Medicine", "Business", "Computing"],
     },
     {
-      rank: "#4 in UK",
       name: "London School of Economics",
       location: "London",
       programs: ["Economics", "Politics", "Law", "Management"],
     },
     {
-      rank: "#5 in UK",
       name: "University College London",
       location: "London",
       programs: ["Architecture", "Medicine", "Engineering", "Arts"],
-    },
-    {
-      rank: "#6 in UK",
-      name: "University of Edinburgh",
-      location: "Edinburgh",
-      programs: ["Medicine", "Veterinary", "Business", "Arts"],
-    },
-    {
-      rank: "#7 in UK",
-      name: "King's College London",
-      location: "London",
-      programs: ["Medicine", "Law", "Business", "Humanities"],
-    },
-    {
-      rank: "#8 in UK",
-      name: "University of Manchester",
-      location: "Manchester",
-      programs: ["Engineering", "Business", "Medicine", "Computer Science"],
     },
   ];
 
@@ -64,7 +51,9 @@ export default function StudyDestinations() {
     UK: {
       title: "Study in United Kingdom",
       description:
-        "The UK offers world-renowned universities with rich academic traditions, cutting-edge research facilities, and globally recognized degrees. Experience diverse cultures while studying in historic cities.",
+        "The UK offers world-renowned universities with rich academic traditions.",
+      overview:
+        "The United Kingdom (UK) is a country in northwestern Europe, made up of England, Scotland, Wales, and Northern Ireland. It has a rich history, vibrant culture, and diverse landscapes ranging from bustling cities like London to scenic areas such as the Scottish Highlands and Welsh mountains. The UK is a constitutional monarchy with a parliamentary system, and its economy is one of the largest in the world, driven by finance, technology, and services. Renowned for its prestigious universities like Oxford and Cambridge, the UK attracts students from around the globe. It is also famous for its contributions to literature, music, and sports, making it a popular destination for both education and tourism.",
       stats: [
         { value: "150+", label: "Universities", icon: <FaUniversity /> },
         { value: "500+", label: "Programs", icon: <FaBookOpen /> },
@@ -76,7 +65,9 @@ export default function StudyDestinations() {
     Canada: {
       title: "Study in Canada",
       description:
-        "Canada offers high-quality education, affordable tuition, and a welcoming multicultural environment. A top choice for international students.",
+        "Canada offers high-quality education and a multicultural environment.",
+      overview:
+        "Canada is the second-largest country in the world, located in North America, and is known for its vast landscapes, including mountains, forests, and lakes. It is a multicultural and bilingual nation, with English and French as its official languages. Canada has a parliamentary democracy and a constitutional monarchy, with Ottawa as its capital. The country has a strong and diverse economy, driven by natural resources, technology, and services. Canada is also renowned for its high-quality education system, welcoming environment for international students, and vibrant cities like Toronto, Vancouver, and Montreal, making it a popular destination for both living and studying.",
       stats: [
         { value: "90+", label: "Universities", icon: <FaUniversity /> },
         { value: "350+", label: "Programs", icon: <FaBookOpen /> },
@@ -87,8 +78,9 @@ export default function StudyDestinations() {
     },
     USA: {
       title: "Study in United States",
-      description:
-        "The USA is home to world-leading universities, cutting-edge research opportunities, and unlimited career paths.",
+      description: "The USA is home to world-leading universities.",
+      overview:
+        "The United States of America (USA) is a large and diverse country located in North America, consisting of 50 states and a federal district, Washington, D.C., which is the capital. It is known for its economic and technological power, cultural influence, and diverse landscapes ranging from bustling cities like New York and Los Angeles to natural wonders such as the Grand Canyon and Yellowstone. The USA is a federal republic with a democratic system, led by an elected president. It has a highly developed economy, world-class universities, and a rich cultural heritage in music, film, literature, and sports, making it a top destination for education, business, and tourism.",
       stats: [
         { value: "170+", label: "Universities", icon: <FaUniversity /> },
         { value: "700+", label: "Programs", icon: <FaBookOpen /> },
@@ -99,8 +91,9 @@ export default function StudyDestinations() {
     },
     Sweden: {
       title: "Study in Sweden",
-      description:
-        "Sweden offers innovation-driven education, beautiful landscapes, and top-tier academic opportunities.",
+      description: "Sweden offers innovation-driven education and top-tier opportunities.",
+      overview:
+        "Sweden is a Nordic country in Northern Europe, known for its stunning natural landscapes, including forests, lakes, and the northern lights. Its capital, Stockholm, is a vibrant city blending modern innovation with historical charm. Sweden is a constitutional monarchy with a parliamentary democracy and is recognized for its high standard of living, strong social welfare system, and commitment to sustainability. The country has a highly developed economy driven by technology, manufacturing, and services, and is home to world-class universities that attract international students. Sweden is also famous for its rich cultural heritage, design, music, and progressive society, making it an appealing destination for both study and travel.",
       stats: [
         { value: "50+", label: "Universities", icon: <FaUniversity /> },
         { value: "200+", label: "Programs", icon: <FaBookOpen /> },
@@ -112,7 +105,9 @@ export default function StudyDestinations() {
     Australia: {
       title: "Study in Australia",
       description:
-        "Australia features highly ranked universities and a vibrant lifestyle, making it a top destination for international students.",
+        "Australia features highly ranked universities and a vibrant lifestyle.",
+      overview:
+        "Australia is a vast country and continent located in the Southern Hemisphere, known for its unique wildlife, natural wonders like the Great Barrier Reef and Uluru, and diverse landscapes ranging from deserts to lush forests. Its capital is Canberra, while Sydney and Melbourne are major cultural and economic hubs. Australia is a constitutional monarchy with a parliamentary democracy and has a highly developed economy driven by mining, agriculture, services, and technology. The country is renowned for its high-quality education system, welcoming international students, and vibrant multicultural society. With a rich cultural heritage, outdoor lifestyle, and iconic landmarks, Australia is a popular destination for study, work, and tourism.",
       stats: [
         { value: "43+", label: "Universities", icon: <FaUniversity /> },
         { value: "300+", label: "Programs", icon: <FaBookOpen /> },
@@ -123,164 +118,298 @@ export default function StudyDestinations() {
     },
   };
 
+  const touristData = {
+    USA: {
+      title: "Visit United States",
+      description:
+        "Explore diverse landscapes, vibrant cities, and world-class attractions across America.",
+      stats: [
+        { value: "50+", label: "Destinations" },
+        { value: "1000+", label: "Attractions" },
+        { value: "80M+/year", label: "Visitors" },
+      ],
+      image:
+        "https://images.unsplash.com/photo-1501594907352-04cda38ebc29",
+    },
+    Canada: {
+      title: "Visit Canada",
+      description:
+        "Experience Canada’s natural wonders — from the Rocky Mountains to Toronto’s urban lifestyle.",
+      stats: [
+        { value: "40+", label: "Destinations" },
+        { value: "800+", label: "Attractions" },
+        { value: "22M+/year", label: "Visitors" },
+      ],
+      image:
+        "https://images.unsplash.com/photo-1504384308090-c894fdcc538d",
+    },
+  };
+
   return (
     <div className="w-full">
-      {/* ================= HERO ================= */}
+      {/* HERO */}
       <div className="bg-blue-600 text-white text-center py-20 px-4">
         <h1 className="text-4xl font-bold mb-3">Study Destinations</h1>
         <p className="max-w-3xl mx-auto text-lg opacity-90">
           Explore world-class education opportunities in top destinations.
-          Choose from our carefully selected universities and programs.
         </p>
       </div>
 
-      {/* ================= TABS ================= */}
-      <div className="flex flex-wrap justify-center gap-4 py-10">
-        {[
-          ["UK", "United Kingdom"],
-          ["Canada", "Canada"],
-          ["USA", "United States"],
-          ["Sweden", "Sweden"],
-          ["Australia", "Australia"],
-        ].map(([key, label]) => (
+      {/* MAIN TABS */}
+      <div className="py-5 text-center">
+        <div className="mt-6 flex justify-center gap-4">
           <button
-            key={key}
-            onClick={() => setActive(key)}
-            className={`px-6 py-2 rounded-lg border transition-all
-              ${
-                active === key
-                  ? "bg-blue-600 text-white border-blue-600"
-                  : "border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
-              }
-            `}
+            className={`btn ${tab === "students" ? "btn-primary" : "btn-secondary"}`}
+            onClick={() => setTab("students")}
           >
-            {label}
+            <FaUserGraduate className="mr-2" /> For Students
           </button>
-        ))}
+          <button
+            className={`btn ${tab === "tourists" ? "btn-primary" : "btn-secondary"}`}
+            onClick={() => setTab("tourists")}
+          >
+            <FaUmbrellaBeach className="mr-2" /> For Tourists
+          </button>
+        </div>
       </div>
 
-      {/* ================= CONTENT ================= */}
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 p-6 pb-20">
-        {/* IMAGE */}
-        <img
-          src={destinations[active].image}
-          className="w-full h-[330px] rounded-xl object-cover shadow"
-          alt={destinations[active].title}
-        />
+      <div className="max-w-6xl mx-auto pt-5">
+        {/* TOURISTS */}
+        {tab === "tourists" && (
+          <div>
+            <div className="flex flex-wrap justify-center gap-4">
+              {Object.keys(touristData).map((c) => (
+                <button
+                  key={c}
+                  onClick={() => setActiveTourist(c)}
+                  className={`px-6 py-2 rounded-lg border transition-all ${
+                    activeTourist === c
+                      ? "bg-blue-600 text-white border-blue-600"
+                      : "border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
+                  }`}
+                >
+                  {c}
+                </button>
+              ))}
+            </div>
 
-        {/* TEXT SECTION */}
-        <div>
-          <h2 className="text-3xl font-bold mb-4">
-            {destinations[active].title}
-          </h2>
-
-          <p className="text-gray-600 mb-8 leading-relaxed">
-            {destinations[active].description}
-          </p>
-
-          {/* STATS */}
-          <div className="grid grid-cols-3 gap-4 mb-10">
-            {destinations[active].stats.map((stat, i) => (
-              <div key={i} className="text-center">
-                <div className="text-primary text-3xl mb-2 flex justify-center">
-                  {stat.icon}
+            {/* Card */}
+            <div className="w-full flex justify-center items-center py-16">
+              <div className="max-w-6xl rounded-2xl shadow-lg p-6 grid md:grid-cols-2 gap-10 items-center">
+                <img
+                  src={touristData[activeTourist].image}
+                  alt={activeTourist}
+                  className="w-full h-80 object-cover rounded-xl shadow-md"
+                />
+                <div>
+                  <h1 className="text-4xl font-bold mb-4">{touristData[activeTourist].title}</h1>
+                  <p className="text-gray-600 leading-relaxed mb-6">{touristData[activeTourist].description}</p>
+                  <div className="flex gap-10 mb-8">
+                    {touristData[activeTourist].stats.map((s, i) => (
+                      <div key={i}>
+                        <h2 className="text-2xl font-bold text-blue-600">{s.value}</h2>
+                        <p className="text-gray-600 text-sm">{s.label}</p>
+                      </div>
+                    ))}
+                  </div>
+                  <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-md transition duration-300">
+                    Plan Your Trip
+                  </button>
                 </div>
-                <p className="text-2xl font-bold">{stat.value}</p>
-                <p className="text-gray-500 text-sm">{stat.label}</p>
               </div>
-            ))}
+            </div>
+
+            {/* Universities */}
+            <div className="w-full bg-gray-50 py-16">
+              <h2 className="text-4xl font-bold text-center text-blue-700 mb-12">
+                Top Universities in {activeTourist}
+              </h2>
+              <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 px-4">
+                {universities.map((u, index) => (
+                  <div
+                    key={index}
+                    className="bg-white shadow-lg hover:shadow-xl transition-all rounded-xl p-6"
+                  >
+                    <div className="flex justify-between items-center mb-4">
+                      <h3 className="text-xl font-bold">{u.name}</h3>
+                    </div>
+                    <div className="flex items-center gap-2 text-gray-600 mb-4">
+                      <FaMapMarkerAlt className="text-blue-600" />
+                      <p>{u.location}</p>
+                    </div>
+                    <p className="font-semibold text-gray-700 mb-2">Popular Programs:</p>
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {u.programs.map((p, i) => (
+                        <span
+                          key={i}
+                          className="bg-blue-50 text-blue-700 px-3 py-1 rounded-md text-sm"
+                        >
+                          {p}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="grid grid-cols-2 gap-4">
+                      <button className="btn btn-outline btn-sm">View Details</button>
+                      <button className="btn btn-primary btn-sm">Apply Now</button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
+        )}
 
-          {/* BUTTON */}
-          <button className="btn btn-primary text-lg px-8">
-            Get Free Consultation
-          </button>
-        </div>
-      </div>
+        {/* STUDENTS */}
+        {tab === "students" && (
+          <div className="pt-10">
+            {/* Country Tabs */}
+            <div className="flex flex-wrap justify-center gap-4">
+              {Object.keys(destinations).map((c) => (
+                <button
+                  key={c}
+                  onClick={() => setActiveStudent(c)}
+                  className={`px-6 py-2 rounded-full border text-sm font-semibold transition-all ${
+                    activeStudent === c
+                      ? "bg-blue-600 text-white border-blue-600 shadow-md"
+                      : "border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
+                  }`}
+                >
+                  {c}
+                </button>
+              ))}
+            </div>
 
+            {/* Main Info */}
+            <div className="grid md:grid-cols-2 gap-10 mt-10 items-start">
+              <img
+                src={destinations[activeStudent].image}
+                alt={destinations[activeStudent].title}
+                className="w-full h-[350px] object-cover rounded-xl shadow-xl"
+              />
+              <div>
+                <h2 className="text-3xl font-bold mb-3">{destinations[activeStudent].title}</h2>
+                <p className="text-gray-600 leading-relaxed mb-5">{destinations[activeStudent].description}</p>
 
-      {/* ================= TOP UNIVERSITIES ================= */}
-<div className="w-full bg-gray-50 py-16">
-  <h2 className="text-4xl font-bold text-center text-blue-700 mb-12">
-    Top Universities in United Kingdom
-  </h2>
+                {/* Stats */}
+                <div className="grid grid-cols-3 gap-4 mb-8">
+                  {destinations[activeStudent].stats.map((stat, i) => (
+                    <div
+                      key={i}
+                      className="bg-blue-50 rounded-xl py-5 text-center border border-blue-100"
+                    >
+                      <div className="flex justify-center text-blue-600 text-3xl mb-2">
+                        {stat.icon}
+                      </div>
+                      <p className="text-xl font-bold text-blue-700">{stat.value}</p>
+                      <p className="text-gray-500 text-sm">{stat.label}</p>
+                    </div>
+                  ))}
+                </div>
 
-  <div className="max-w-7xl mx-auto grid sm:grid-cols-1 md:grid-cols-2 gap-8 px-4">
-    {universities.map((u, index) => (
+                <button className="px-7 py-3 bg-blue-600 text-white rounded-lg font-semibold shadow-md hover:bg-blue-700">
+                  Get Free Consultation
+                </button>
+              </div>
+            </div>
+
+            {/* Overview */}
+            <div className="mt-16">
+              <h3 className="text-2xl font-bold mb-4">Overview of {activeStudent}</h3>
+              <div className="bg-gray-50 p-6 rounded-xl leading-relaxed shadow">
+                {destinations[activeStudent].overview}
+              </div>
+            </div>
+
+            {/* Living Standards */}
+            <div className="mt-16">
+              <h3 className="text-2xl font-bold text-center mb-10">Living Standards & Facilities</h3>
+              <div className="grid md:grid-cols-3 gap-6">
+                {[
+                  { title: "Accommodation", desc: "Modern student housing & on-campus living options.", icon: <FaHome className="text-2xl text-blue-600" /> },
+                  { title: "Transportation", desc: "Affordable and reliable public transport.", icon: <FaBus className="text-2xl text-blue-600" /> },
+                  { title: "Healthcare", desc: "High-quality medical & international student support.", icon: <FaHospital className="text-2xl text-blue-600" /> },
+                  { title: "Shopping & Dining", desc: "Diverse food, shopping, and cultural options.", icon: <FaShoppingCart className="text-2xl text-blue-600" /> },
+                  { title: "Safety", desc: "Safe environment with low crime rate.", icon: <FaShieldAlt className="text-2xl text-blue-600" /> },
+                  { title: "Culture", desc: "Rich heritage, museums, festivals & global communities.", icon: <FaGlobe className="text-2xl text-blue-600" /> },
+                ].map((item, i) => (
+                  <div key={i} className="bg-white border rounded-xl p-6 shadow-sm hover:shadow-xl transition-all cursor-pointer">
+                    <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                      {item.icon}
+                    </div>
+                    <h4 className="text-lg font-semibold mb-2">{item.title}</h4>
+                    <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Living Cost */}
+<div className="mt-20">
+  <h3 className="text-2xl font-bold text-center mb-8">Approximate Living Cost</h3>
+
+  <div className="max-w-3xl mx-auto bg-white border border-gray-200 shadow-xl rounded-2xl p-8">
+
+    {[
+      { title: "Accommodation", price: "£400-800/month", icon: "🏠" },
+      { title: "Food & Groceries", price: "£150-250/month", icon: "🍽️" },
+      { title: "Transportation", price: "£50-100/month", icon: "🚌" },
+      { title: "Utilities", price: "£40-80/month", icon: "💡" },
+      { title: "Entertainment", price: "£50-100/month", icon: "🎉" },
+    ].map((item, i) => (
       <div
-        key={index}
-        className="bg-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl p-6 border border-gray-100"
+        key={i}
+        className="flex items-center justify-between py-4 px-4 mb-3 bg-gray-50 rounded-xl border border-gray-200 hover:shadow-md transition-all"
       >
-        {/* Header */}
-        <div className="flex justify-between items-center mb-4">
-          <h3 className="text-lg sm:text-xl font-bold text-gray-800">{u.name}</h3>
-          <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
-            {u.rank}
-          </span>
+        <div className="flex items-center gap-3">
+          <span className="text-xl">{item.icon}</span>
+          <p className="font-semibold text-gray-800">{item.title}</p>
         </div>
-
-        {/* Location */}
-        <div className="flex items-center gap-2 text-gray-600 mb-4">
-          <FaMapMarkerAlt className="text-blue-600 text-lg" />
-          <p className="text-sm sm:text-base">{u.location}</p>
-        </div>
-
-        {/* Programs */}
-        <p className="text-gray-700 font-semibold mb-2">Popular Programs:</p>
-        <div className="flex flex-wrap gap-2 mb-6">
-          {u.programs.map((p, i) => (
-            <span
-              key={i}
-              className="bg-blue-50 text-blue-700 px-3 py-1 rounded-md text-xs sm:text-sm"
-            >
-              {p}
-            </span>
-          ))}
-        </div>
-
-        {/* Buttons */}
-        <div className="grid grid-cols-2 gap-4">
-          <button className="btn btn-outline btn-sm sm:btn-md w-full">
-            View Details
-          </button>
-          <button className="btn btn-primary btn-sm sm:btn-md w-full">
-            Apply Now
-          </button>
-        </div>
+        <p className="text-blue-700 font-semibold">{item.price}</p>
       </div>
     ))}
-  </div>
 
-  {/* CTA SECTION */}
-  <div className="bg-blue-600 text-white rounded-xl max-w-7xl mx-auto mt-20 p-10 text-center shadow-lg">
-    <h2 className="text-3xl font-bold mb-3">Ready to Apply?</h2>
-    <p className="max-w-2xl mx-auto text-lg opacity-90 mb-6">
-      Our expert counselors will help you choose the right university and guide
-      you through the entire application process.
+    {/* Total */}
+    <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-xl flex justify-between text-lg font-bold text-blue-700">
+      <span>Total Estimated Cost</span>
+      <span>£690-1,330/month</span>
+    </div>
+
+    {/* Note */}
+    <p className="text-xs text-gray-500 mt-4 text-center">
+      * Costs may vary based on lifestyle, location, and personal preferences.
     </p>
-
-    <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 mt-6 w-full">
-
-  {/* Consultation Button */}
-  <button
-    className="w-full sm:w-auto btn bg-yellow-400 text-black border-none 
-    px-6 sm:px-8 py-3 text-base sm:text-lg rounded-lg font-semibold
-    hover:bg-yellow-300 transition-all duration-300"
-  >
-    Book Free Consultation
-  </button>
-
-  {/* Guide Button */}
-  <button
-    className="w-full sm:w-auto btn border border-white 
-    px-6 sm:px-8 py-3 text-base sm:text-lg rounded-lg font-semibold
-    hover:bg-white hover:text-blue-700 transition-all duration-300"
-  >
-    Download University Guide
-  </button>
-
+  </div>
 </div>
 
+          </div>
+        )}
+      </div>
+
+      {/* Footer CTA */}
+      <div className="w-full flex justify-center px-4 mt-16 mb-10">
+  <div className="bg-[#002366] text-white text-center py-16 px-6 rounded-2xl max-w-6xl w-full shadow-xl">
+
+    <h2 className="text-3xl font-bold">Ready to Start Your Journey?</h2>
+
+    <p className="mt-3 text-lg text-gray-200 max-w-2xl mx-auto">
+      Take the first step towards your international education dreams.
+      Our expert counselors are here to guide you every step of the way.
+    </p>
+
+    <div className="flex justify-center gap-5 mt-8 flex-wrap">
+
+      {/* Book Button */}
+      <button className="bg-white text-[#002366] font-semibold px-8 py-3 rounded-lg shadow hover:bg-gray-100 transition">
+        Book Free Consultation
+      </button>
+
+      {/* Call Button */}
+      <button className="border border-white text-white font-semibold px-8 py-3 rounded-lg flex items-center gap-2 hover:bg-white hover:text-[#002366] transition">
+            <FiPhone className="text-lg" />
+            Call Now: 01805-021560
+          </button>
+
+    </div>
   </div>
 </div>
 
