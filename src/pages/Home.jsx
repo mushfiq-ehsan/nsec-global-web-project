@@ -187,7 +187,7 @@ const Home = () => {
         </section>
       </div>
 
-      <section className="py-10">
+      <section className="py-10 px-4">
         <div className="bg-[#002060] text-white py-10 flex flex-col items-center text-center px-4 max-w-7xl mx-auto rounded-xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Start Your Journey?

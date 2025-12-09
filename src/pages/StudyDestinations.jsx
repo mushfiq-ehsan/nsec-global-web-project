@@ -11,8 +11,11 @@ import {
   FaShoppingCart,
   FaShieldAlt,
   FaGlobe,
+  FaLightbulb,
 } from "react-icons/fa";
 import { FiPhone } from "react-icons/fi";
+import { GoVideo } from "react-icons/go";
+import { ImSpoonKnife } from "react-icons/im";
 
 export default function StudyDestinations() {
   const [tab, setTab] = useState("students");
@@ -147,45 +150,51 @@ export default function StudyDestinations() {
 
   return (
     <div className="w-full">
+
       {/* HERO */}
-      <div className="bg-blue-600 text-white text-center py-20 px-4">
-        <h1 className="text-4xl font-bold mb-3">Study Destinations</h1>
-        <p className="max-w-3xl mx-auto text-lg opacity-90">
+      <div className="bg-blue-600 text-white text-center py-16 px-4 sm:py-20">
+        <h1 className="text-3xl sm:text-4xl font-bold mb-3">Study Destinations</h1>
+        <p className="max-w-3xl mx-auto text-base sm:text-lg opacity-90">
           Explore world-class education opportunities in top destinations.
         </p>
       </div>
 
       {/* MAIN TABS */}
       <div className="py-5 text-center">
-        <div className="mt-6 flex justify-center gap-4">
+        <div className="mt-6 flex flex-wrap justify-center gap-4">
           <button
-            className={`btn ${tab === "students" ? "btn-primary" : "btn-secondary"}`}
+            className={`px-4 py-2 rounded-lg font-semibold transition-colors ${
+              tab === "students" ? "bg-[#002060] text-white" : "bg-blue-500 text-white"
+            }`}
             onClick={() => setTab("students")}
           >
-            <FaUserGraduate className="mr-2" /> For Students
+            <FaUserGraduate className="inline mr-2" /> For Students
           </button>
           <button
-            className={`btn ${tab === "tourists" ? "btn-primary" : "btn-secondary"}`}
+            className={`px-4 py-2 rounded-lg font-semibold transition-colors ${
+              tab === "tourists" ? "bg-[#002060] text-white" : "bg-blue-500 text-white"
+            }`}
             onClick={() => setTab("tourists")}
           >
-            <FaUmbrellaBeach className="mr-2" /> For Tourists
+            <FaUmbrellaBeach className="inline mr-2" /> For Tourists
           </button>
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto pt-5">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+
         {/* TOURISTS */}
         {tab === "tourists" && (
           <div>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-3 mb-10">
               {Object.keys(touristData).map((c) => (
                 <button
                   key={c}
                   onClick={() => setActiveTourist(c)}
-                  className={`px-6 py-2 rounded-lg border transition-all ${
+                  className={`px-5 py-2 rounded-full text-sm font-semibold transition-all ${
                     activeTourist === c
-                      ? "bg-blue-600 text-white border-blue-600"
-                      : "border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
+                      ? "bg-blue-600 text-white border-blue-600 shadow"
+                      : "border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
                   }`}
                 >
                   {c}
@@ -194,63 +203,59 @@ export default function StudyDestinations() {
             </div>
 
             {/* Card */}
-            <div className="w-full flex justify-center items-center py-16">
-              <div className="max-w-6xl rounded-2xl shadow-lg p-6 grid md:grid-cols-2 gap-10 items-center">
-                <img
-                  src={touristData[activeTourist].image}
-                  alt={activeTourist}
-                  className="w-full h-80 object-cover rounded-xl shadow-md"
-                />
-                <div>
-                  <h1 className="text-4xl font-bold mb-4">{touristData[activeTourist].title}</h1>
-                  <p className="text-gray-600 leading-relaxed mb-6">{touristData[activeTourist].description}</p>
-                  <div className="flex gap-10 mb-8">
-                    {touristData[activeTourist].stats.map((s, i) => (
-                      <div key={i}>
-                        <h2 className="text-2xl font-bold text-blue-600">{s.value}</h2>
-                        <p className="text-gray-600 text-sm">{s.label}</p>
-                      </div>
-                    ))}
-                  </div>
-                  <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-md transition duration-300">
-                    Plan Your Trip
-                  </button>
+            <div className="flex flex-col md:flex-row items-center gap-10 mb-16">
+              <img
+                src={touristData[activeTourist].image}
+                alt={activeTourist}
+                className="w-full md:w-1/2 h-64 md:h-80 object-cover rounded-xl shadow-md"
+              />
+              <div className="flex-1">
+                <h1 className="text-2xl sm:text-3xl font-bold mb-4">{touristData[activeTourist].title}</h1>
+                <p className="text-gray-600 mb-6">{touristData[activeTourist].description}</p>
+                <div className="flex flex-wrap gap-6 mb-6">
+                  {touristData[activeTourist].stats.map((s, i) => (
+                    <div key={i} className="flex flex-col items-center text-center">
+                      <h2 className="text-xl font-bold text-blue-600">{s.value}</h2>
+                      <p className="text-gray-600 text-sm">{s.label}</p>
+                    </div>
+                  ))}
                 </div>
+                <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-md transition duration-300 w-full md:w-auto">
+                  Plan Your Trip
+                </button>
               </div>
             </div>
 
             {/* Universities */}
-            <div className="w-full bg-gray-50 py-16">
-              <h2 className="text-4xl font-bold text-center text-blue-700 mb-12">
+            <div className="mb-16">
+              <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-700 mb-10">
                 Top Universities in {activeTourist}
               </h2>
-              <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 px-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {universities.map((u, index) => (
                   <div
                     key={index}
-                    className="bg-white shadow-lg hover:shadow-xl transition-all rounded-xl p-6"
+                    className="bg-white shadow-lg hover:shadow-xl transition-all rounded-xl p-5 flex flex-col"
                   >
-                    <div className="flex justify-between items-center mb-4">
-                      <h3 className="text-xl font-bold">{u.name}</h3>
-                    </div>
-                    <div className="flex items-center gap-2 text-gray-600 mb-4">
+                    <h3 className="text-lg font-bold mb-2">{u.name}</h3>
+                    <div className="flex items-center gap-2 text-gray-600 mb-2">
                       <FaMapMarkerAlt className="text-blue-600" />
                       <p>{u.location}</p>
                     </div>
                     <p className="font-semibold text-gray-700 mb-2">Popular Programs:</p>
-                    <div className="flex flex-wrap gap-2 mb-6">
+                    <div className="flex flex-wrap gap-2 mb-4">
                       {u.programs.map((p, i) => (
                         <span
                           key={i}
-                          className="bg-blue-50 text-blue-700 px-3 py-1 rounded-md text-sm"
+                          className="bg-blue-50 text-blue-700 px-2 py-1 rounded-md text-xs sm:text-sm"
                         >
                           {p}
                         </span>
                       ))}
                     </div>
-                    <div className="grid grid-cols-2 gap-4">
-                      <button className="btn btn-outline btn-sm">View Details</button>
-                      <button className="btn btn-primary btn-sm">Apply Now</button>
+                    <div className="mt-auto flex flex-wrap gap-2">
+                      <button className="btn btn-outline btn-sm flex-1">View Details</button>
+                      <button className="btn btn-primary btn-sm flex-1">Apply Now</button>
                     </div>
                   </div>
                 ))}
@@ -263,15 +268,15 @@ export default function StudyDestinations() {
         {tab === "students" && (
           <div className="pt-10">
             {/* Country Tabs */}
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-3 mb-10">
               {Object.keys(destinations).map((c) => (
                 <button
                   key={c}
                   onClick={() => setActiveStudent(c)}
-                  className={`px-6 py-2 rounded-full border text-sm font-semibold transition-all ${
+                  className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${
                     activeStudent === c
-                      ? "bg-blue-600 text-white border-blue-600 shadow-md"
-                      : "border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
+                      ? "bg-blue-600 text-white shadow"
+                      : "border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
                   }`}
                 >
                   {c}
@@ -280,50 +285,43 @@ export default function StudyDestinations() {
             </div>
 
             {/* Main Info */}
-            <div className="grid md:grid-cols-2 gap-10 mt-10 items-start">
+            <div className="flex flex-col md:flex-row items-start gap-6 mb-16">
               <img
                 src={destinations[activeStudent].image}
                 alt={destinations[activeStudent].title}
-                className="w-full h-[350px] object-cover rounded-xl shadow-xl"
+                className="w-full md:w-1/2 h-64 md:h-80 object-cover rounded-xl shadow-xl"
               />
-              <div>
-                <h2 className="text-3xl font-bold mb-3">{destinations[activeStudent].title}</h2>
+              <div className="flex-1">
+                <h2 className="text-2xl sm:text-3xl font-bold mb-3">{destinations[activeStudent].title}</h2>
                 <p className="text-gray-600 leading-relaxed mb-5">{destinations[activeStudent].description}</p>
 
                 {/* Stats */}
-                <div className="grid grid-cols-3 gap-4 mb-8">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
                   {destinations[activeStudent].stats.map((stat, i) => (
-                    <div
-                      key={i}
-                      className="bg-blue-50 rounded-xl py-5 text-center border border-blue-100"
-                    >
-                      <div className="flex justify-center text-blue-600 text-3xl mb-2">
-                        {stat.icon}
-                      </div>
+                    <div key={i} className="bg-blue-50 rounded-xl py-5 text-center border border-blue-100">
+                      <div className="flex justify-center text-blue-600 text-3xl mb-2">{stat.icon}</div>
                       <p className="text-xl font-bold text-blue-700">{stat.value}</p>
                       <p className="text-gray-500 text-sm">{stat.label}</p>
                     </div>
                   ))}
                 </div>
 
-                <button className="px-7 py-3 bg-blue-600 text-white rounded-lg font-semibold shadow-md hover:bg-blue-700">
+                <button className="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold shadow-md hover:bg-blue-700 w-full md:w-auto">
                   Get Free Consultation
                 </button>
               </div>
             </div>
 
             {/* Overview */}
-            <div className="mt-16">
+            <div className="mb-16">
               <h3 className="text-2xl font-bold mb-4">Overview of {activeStudent}</h3>
-              <div className="bg-gray-50 p-6 rounded-xl leading-relaxed shadow">
-                {destinations[activeStudent].overview}
-              </div>
+              <div className="bg-gray-50 p-6 rounded-xl shadow">{destinations[activeStudent].overview}</div>
             </div>
 
             {/* Living Standards */}
-            <div className="mt-16">
+            <div className="mb-16">
               <h3 className="text-2xl font-bold text-center mb-10">Living Standards & Facilities</h3>
-              <div className="grid md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {[
                   { title: "Accommodation", desc: "Modern student housing & on-campus living options.", icon: <FaHome className="text-2xl text-blue-600" /> },
                   { title: "Transportation", desc: "Affordable and reliable public transport.", icon: <FaBus className="text-2xl text-blue-600" /> },
@@ -332,10 +330,8 @@ export default function StudyDestinations() {
                   { title: "Safety", desc: "Safe environment with low crime rate.", icon: <FaShieldAlt className="text-2xl text-blue-600" /> },
                   { title: "Culture", desc: "Rich heritage, museums, festivals & global communities.", icon: <FaGlobe className="text-2xl text-blue-600" /> },
                 ].map((item, i) => (
-                  <div key={i} className="bg-white border rounded-xl p-6 shadow-sm hover:shadow-xl transition-all cursor-pointer">
-                    <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                      {item.icon}
-                    </div>
+                  <div key={i} className="bg-white border rounded-xl p-6 shadow-sm hover:shadow-lg transition-all cursor-pointer flex flex-col">
+                    <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">{item.icon}</div>
                     <h4 className="text-lg font-semibold mb-2">{item.title}</h4>
                     <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
                   </div>
@@ -344,75 +340,55 @@ export default function StudyDestinations() {
             </div>
 
             {/* Living Cost */}
-<div className="mt-20">
-  <h3 className="text-2xl font-bold text-center mb-8">Approximate Living Cost</h3>
-
-  <div className="max-w-3xl mx-auto bg-white border border-gray-200 shadow-xl rounded-2xl p-8">
-
-    {[
-      { title: "Accommodation", price: "£400-800/month", icon: "🏠" },
-      { title: "Food & Groceries", price: "£150-250/month", icon: "🍽️" },
-      { title: "Transportation", price: "£50-100/month", icon: "🚌" },
-      { title: "Utilities", price: "£40-80/month", icon: "💡" },
-      { title: "Entertainment", price: "£50-100/month", icon: "🎉" },
-    ].map((item, i) => (
-      <div
-        key={i}
-        className="flex items-center justify-between py-4 px-4 mb-3 bg-gray-50 rounded-xl border border-gray-200 hover:shadow-md transition-all"
-      >
-        <div className="flex items-center gap-3">
-          <span className="text-xl">{item.icon}</span>
-          <p className="font-semibold text-gray-800">{item.title}</p>
-        </div>
-        <p className="text-blue-700 font-semibold">{item.price}</p>
-      </div>
-    ))}
-
-    {/* Total */}
-    <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-xl flex justify-between text-lg font-bold text-blue-700">
-      <span>Total Estimated Cost</span>
-      <span>£690-1,330/month</span>
-    </div>
-
-    {/* Note */}
-    <p className="text-xs text-gray-500 mt-4 text-center">
-      * Costs may vary based on lifestyle, location, and personal preferences.
-    </p>
-  </div>
-</div>
-
+            <div className="mb-16">
+              <h3 className="text-2xl font-bold text-center mb-8">Approximate Living Cost</h3>
+              <div className="max-w-3xl mx-auto bg-white border border-gray-200 shadow-xl rounded-2xl p-6 sm:p-8">
+                {[
+                  { title: "Accommodation", price: "£400-800/month", icon: <FaHome className="text-2xl text-blue-600" /> },
+                  { title: "Food & Groceries", price: "£150-250/month", icon: <ImSpoonKnife className="text-2xl text-blue-600" /> },
+                  { title: "Transportation", price: "£50-100/month", icon: <FaBus className="text-2xl text-blue-600" /> },
+                  { title: "Utilities", price: "£40-80/month", icon: <FaLightbulb className="text-2xl text-blue-600" /> },
+                  { title: "Entertainment", price: "£50-100/month", icon: <GoVideo className="text-2xl text-blue-600" /> },
+                ].map((item, i) => (
+                  <div key={i} className="flex flex-col sm:flex-row items-center justify-between py-4 px-4 mb-3 bg-gray-50 rounded-xl border border-gray-200 hover:shadow-md transition-all">
+                    <div className="flex items-center gap-3 mb-2 sm:mb-0">
+                      <span>{item.icon}</span>
+                      <p className="font-semibold text-gray-800">{item.title}</p>
+                    </div>
+                    <p className="text-blue-700 font-semibold">{item.price}</p>
+                  </div>
+                ))}
+                <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-xl flex flex-col sm:flex-row justify-between text-lg font-bold text-blue-700">
+                  <span>Total Estimated Cost</span>
+                  <span>£690-1,330/month</span>
+                </div>
+                <p className="text-xs text-gray-500 mt-4 text-center">
+                  * Costs may vary based on lifestyle, location, and personal preferences.
+                </p>
+              </div>
+            </div>
           </div>
         )}
       </div>
 
       {/* Footer CTA */}
-      <div className="w-full flex justify-center px-4 mt-16 mb-10">
-  <div className="bg-[#002366] text-white text-center py-16 px-6 rounded-2xl max-w-6xl w-full shadow-xl">
-
-    <h2 className="text-3xl font-bold">Ready to Start Your Journey?</h2>
-
-    <p className="mt-3 text-lg text-gray-200 max-w-2xl mx-auto">
-      Take the first step towards your international education dreams.
-      Our expert counselors are here to guide you every step of the way.
-    </p>
-
-    <div className="flex justify-center gap-5 mt-8 flex-wrap">
-
-      {/* Book Button */}
-      <button className="bg-white text-[#002366] font-semibold px-8 py-3 rounded-lg shadow hover:bg-gray-100 transition">
-        Book Free Consultation
-      </button>
-
-      {/* Call Button */}
-      <button className="border border-white text-white font-semibold px-8 py-3 rounded-lg flex items-center gap-2 hover:bg-white hover:text-[#002366] transition">
-            <FiPhone className="text-lg" />
-            Call Now: 01805-021560
-          </button>
-
-    </div>
-  </div>
-</div>
-
+      <div className="w-full flex justify-center px-4 mb-10">
+        <div className="bg-[#002366] text-white text-center py-12 px-4 sm:px-6 rounded-2xl max-w-6xl w-full shadow-xl">
+          <h2 className="text-2xl sm:text-3xl font-bold">Ready to Start Your Journey?</h2>
+          <p className="mt-3 text-gray-200 max-w-2xl mx-auto text-sm sm:text-base">
+            Take the first step towards your international education dreams.
+            Our expert counselors are here to guide you every step of the way.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4 mt-6 sm:mt-8">
+            <button className="bg-white text-[#002366] font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-lg shadow hover:bg-gray-100 transition w-full sm:w-auto">
+              Book Free Consultation
+            </button>
+            <button className="border border-white text-white font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-lg flex items-center gap-2 hover:bg-white hover:text-[#002366] transition w-full sm:w-auto justify-center">
+              <FiPhone className="text-lg" /> Call Now: 01805-021560
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
