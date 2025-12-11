@@ -43,7 +43,7 @@ const About = () => {
   return (
     <div className="w-full">
       {/* HERO SECTION */}
-      <section className="bg-[#002060] text-white py-20 text-center px-4 md:px-8">
+      <section className="bg-[#002060] text-white py-30 text-center px-4 md:px-10">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">About NSEC Global</h1>
         <p className="max-w-2xl mx-auto text-lg md:text-xl opacity-90">
           Empowering students worldwide to achieve their international education dreams through expert guidance, personalized support, and an unwavering commitment to excellence.

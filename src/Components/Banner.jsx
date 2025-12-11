@@ -22,22 +22,22 @@ const Banner = () => {
         pagination={{ clickable: true }}
         loop={true}
         speed={700}
-        className="w-full h-full"
+        className="w-full h-full mt-12"
       >
         {images.map((img, index) => (
           <SwiperSlide key={index}>
             <div
-              className="w-full h-full bg-cover bg-center"
+              className="w-full h-full bg-cover bg-center "
               style={{ backgroundImage: `url(${img})` }}
             >
               {/* Overlay */}
               <div className="w-full h-full bg-blue-900/60 flex items-center">
-                <div className="px-5 sm:px-8 md:px-14 lg:px-20 text-white max-w-3xl">
+                <div className="px-5 sm:px-8 md:px-14 lg:pr-0 text-white max-w-3xl">
 
                   {/* TITLE */}
-                  <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold leading-snug">
-                    Building Futures, <br />
-                    <span className="text-yellow-400">Not Just Applications</span>
+                  <h1 className="cooper text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold leading-snug">
+                    BUILDING FUTURES,<br />
+                    <span className="text-[#ff0505]">NOT JUST APPLICATIONS</span>
                   </h1>
 
                   {/* SUB TEXT */}
@@ -49,7 +49,7 @@ const Banner = () => {
 
                   {/* BUTTONS */}
                   <div className="mt-5 flex flex-wrap gap-3 sm:gap-4">
-                    <button className="btn bg-[#002060] text-white hover:bg-[#9b1a1a] hover:text-white rounded-md px-8">
+                    <button className="btn bg-[#002060] text-white hover:bg-white hover:text-[#ff0505] rounded-md px-8">
                       Start Your Journey
                     </button>
                   </div>

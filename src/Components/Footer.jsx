@@ -10,7 +10,7 @@ const Footer = () => {
 
         {/* Logo + Description */}
         <div>
-          <img className='w-40' src="/public/NSEC Logo 2.png" alt="" />
+          <img className='w-40' src="/public/nsec-logo2.png" alt="" />
           <p className="mt-3 text-sm leading-6 text-gray-200">
             Building futures, not just applications.  
             Your trusted partner for international education and career success.

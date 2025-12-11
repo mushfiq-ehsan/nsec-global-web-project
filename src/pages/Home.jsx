@@ -50,22 +50,22 @@ const Home = () => {
         {/* Top Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center mb-12">
           <div>
-            <h2 className="text-3xl font-bold text-primary">2000+</h2>
+            <h2 className="text-3xl font-bold text-[#002060]">2000+</h2>
             <p className="text-sm text-gray-600">Students Placed</p>
           </div>
 
           <div>
-            <h2 className="text-3xl font-bold text-primary">95%</h2>
+            <h2 className="text-3xl font-bold text-[#002060]">95%</h2>
             <p className="text-sm text-gray-600">Visa Success Rate</p>
           </div>
 
           <div>
-            <h2 className="text-3xl font-bold text-primary">50+</h2>
+            <h2 className="text-3xl font-bold text-[#002060]">50+</h2>
             <p className="text-sm text-gray-600">Partner Universities</p>
           </div>
 
           <div>
-            <h2 className="text-3xl font-bold text-primary">8+</h2>
+            <h2 className="text-3xl font-bold text-[#002060]">8+</h2>
             <p className="text-sm text-gray-600">Years Experience</p>
           </div>
         </div>
@@ -75,8 +75,8 @@ const Home = () => {
       <div className="bg-gray-100 w-full py-20">
         {/* Heading Section */}
         <div className="text-center mb-10">
-          <h1 className="text-3xl font-bold text-gray-900">
-            Why Choose NSEC Global?
+          <h1 className="text-3xl font-bold text-gray-900 cooper">
+            WHY CHOOSE NSEC GLOBAL?
           </h1>
           <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
             We provide comprehensive support throughout your international
@@ -88,8 +88,8 @@ const Home = () => {
         {/* Cards Section */}
         <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-6 px-10 md:px-20 w-full">
           <div className="card bg-base-100 shadow-md p-6 text-center">
-            <FaUniversity className="text-4xl text-primary mx-auto mb-4" />
-            <h3 className="font-bold text-lg mb-2">University Selection</h3>
+            <FaUniversity className="text-4xl text-[#002060] mx-auto mb-4" />
+            <h3 className="font-bold text-lg mb-2 cooper">University Selection</h3>
             <p className="text-gray-600 text-sm">
               Expert guidance to choose the perfect university that matches your
               academic goals.
@@ -97,26 +97,26 @@ const Home = () => {
           </div>
 
           <div className="card bg-base-100 shadow-md p-6 text-center">
-            <FaPassport className="text-4xl text-primary mx-auto mb-4" />
-            <h3 className="font-bold text-lg mb-2">Visa Assistance</h3>
-            <p className="text-gray-600 text-sm">
+            <FaPassport className="text-4xl text-[#002060] mx-auto mb-4" />
+            <h3 className="font-bold text-lg mb-2 cooper">Visa Assistance</h3>
+            <p className="text-gray-600 text-sm ">
               Complete visa application support with expert guidance throughout
               the process.
             </p>
           </div>
 
           <div className="card bg-base-100 shadow-md p-6 text-center">
-            <FaFileAlt className="text-4xl text-primary mx-auto mb-4" />
-            <h3 className="font-bold text-lg mb-2">Documentation</h3>
-            <p className="text-gray-600 text-sm">
+            <FaFileAlt className="text-4xl text-[#002060] mx-auto mb-4" />
+            <h3 className="font-bold text-lg mb-2 cooper">Documentation</h3>
+            <p className="text-gray-600 text-sm ">
               Professional assistance with all required documents, ensuring
               accuracy and compliance.
             </p>
           </div>
 
           <div className="card bg-base-100 shadow-md p-6 text-center">
-            <FaUserTie className="text-4xl text-primary mx-auto mb-4" />
-            <h3 className="font-bold text-lg mb-2"> Pre-Departure Support</h3>
+            <FaUserTie className="text-4xl text-[#002060] mx-auto mb-4" />
+            <h3 className="font-bold text-lg mb-2 cooper"> Pre-Departure Support</h3>
             <p className="text-gray-600 text-sm">
               The final step ensures you are fully prepared for your transition
               and arrival in your new country.
@@ -129,9 +129,9 @@ const Home = () => {
       <div>
         <section className="py-16 px-6 bg-base-100">
           {/* Header */}
-          <div className="text-center mb-10">
-            <h1 className="text-3xl font-bold text-gray-900">
-              Popular Study Destinations
+          <div className="text-center mb-10 ">
+            <h1 className="text-3xl font-bold text-gray-900 cooper">
+              POPULAR STUDY DESTINATIONS
             </h1>
             <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
               Explore world-class education opportunities in top destinations
@@ -155,12 +155,12 @@ const Home = () => {
                 </figure>
 
                 <div className="card-body">
-                  <h2 className="text-lg font-bold">{item.name}</h2>
+                  <h2 className="text-lg font-bold cooper">{item.name}</h2>
 
                   <div className=" text-sm text-gray-600 flex gap-3">
                     <p>
                       <span>{item.universities}</span>
-                      <span>Universities</span>
+                      <span >Universities</span>
                     </p>
                     <p>
                       <span>{item.programs}</span>
@@ -189,7 +189,7 @@ const Home = () => {
 
       <section className="py-10 px-4">
         <div className="bg-[#002060] text-white py-10 flex flex-col items-center text-center px-4 max-w-7xl mx-auto rounded-xl">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 cooper">
             Ready to Start Your Journey?
           </h2>
 

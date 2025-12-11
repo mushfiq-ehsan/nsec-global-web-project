@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { GrWorkshop } from "react-icons/gr";
 import { IoMdPeople } from "react-icons/io";
 import { IoHomeOutline } from "react-icons/io5";
@@ -85,7 +85,7 @@ const Navbar = () => {
 
         {/* RIGHT BUTTON */}
         <div className="navbar-end">
-          <button className="btn btn-sm md:btn-md bg-[#9b1a1a] hover:bg-[#7f1515] text-white rounded-md">
+          <button className="btn btn-sm md:btn-md bg-[#002060] hover:bg-white hover:border-[#ff0505] hover:text-[#ff0505] text-white rounded-md">
             Book Appointment
           </button>
         </div>
