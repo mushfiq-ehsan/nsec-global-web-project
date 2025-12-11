@@ -74,8 +74,8 @@ export default function Services() {
       <div className="py-5 text-center">
         <div className="mt-6 flex justify-center gap-4 flex-wrap">
           <button
-            className={`btn ${
-              tab === "students" ? "bg-[#002060] text-white" : "bg-primary text-white"
+            className={`btn px-4 py-2 rounded-lg font-semibold transition-colors ${
+              tab === "students" ? "bg-[#002060] text-white" : "border border-[#002060] text-[#002060]"
             }`}
             onClick={() => setTab("students")}
           >
@@ -83,8 +83,8 @@ export default function Services() {
           </button>
 
           <button
-            className={`btn ${
-              tab === "tourists" ? "bg-[#002060] text-white" : "bg-primary text-white"
+            className={`btn px-4 py-2 rounded-lg font-semibold transition-colors ${
+              tab === "tourists" ? "bg-[#002060] text-white" : "border border-[#002060] text-[#002060]"
             }`}
             onClick={() => setTab("tourists")}
           >

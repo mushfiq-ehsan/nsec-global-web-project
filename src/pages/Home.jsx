@@ -72,58 +72,59 @@ const Home = () => {
       </section>
 
       {/* Why Choose NSEC Global */}
-      <div className="bg-gray-100 w-full py-20">
-        {/* Heading Section */}
-        <div className="text-center mb-10">
-          <h1 className="text-3xl font-bold text-gray-900 cooper">
-            WHY CHOOSE NSEC GLOBAL?
-          </h1>
-          <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
-            We provide comprehensive support throughout your international
-            education journey, from university selection to visa approval and
-            beyond.
-          </p>
-        </div>
+      <div className="bg-gray-100 w-full py-20 px-4 sm:px-6 lg:px-20">
+  {/* Heading Section */}
+  <div className="text-center mb-12">
+    <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 cooper">
+      WHY CHOOSE NSEC GLOBAL?
+    </h1>
+    <p className="text-gray-600 mt-3 max-w-2xl mx-auto text-sm sm:text-base">
+      We provide comprehensive support throughout your international
+      education journey, from university selection to visa approval and
+      beyond.
+    </p>
+  </div>
 
-        {/* Cards Section */}
-        <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-6 px-10 md:px-20 w-full">
-          <div className="card bg-base-100 shadow-md p-6 text-center">
-            <FaUniversity className="text-4xl text-[#002060] mx-auto mb-4" />
-            <h3 className="font-bold text-lg mb-2 cooper">University Selection</h3>
-            <p className="text-gray-600 text-sm">
-              Expert guidance to choose the perfect university that matches your
-              academic goals.
-            </p>
-          </div>
+  {/* Cards Section */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div className="card bg-base-100 shadow-md p-6 text-center flex flex-col items-center">
+      <FaUniversity className="text-4xl text-[#002060] mb-4" />
+      <h3 className="font-bold text-lg mb-2 cooper">University Selection</h3>
+      <p className="text-gray-600 text-sm sm:text-base">
+        Expert guidance to choose the perfect university that matches your
+        academic goals.
+      </p>
+    </div>
 
-          <div className="card bg-base-100 shadow-md p-6 text-center">
-            <FaPassport className="text-4xl text-[#002060] mx-auto mb-4" />
-            <h3 className="font-bold text-lg mb-2 cooper">Visa Assistance</h3>
-            <p className="text-gray-600 text-sm ">
-              Complete visa application support with expert guidance throughout
-              the process.
-            </p>
-          </div>
+    <div className="card bg-base-100 shadow-md p-6 text-center flex flex-col items-center">
+      <FaPassport className="text-4xl text-[#002060] mb-4" />
+      <h3 className="font-bold text-lg mb-2 cooper">Visa Assistance</h3>
+      <p className="text-gray-600 text-sm sm:text-base">
+        Complete visa application support with expert guidance throughout
+        the process.
+      </p>
+    </div>
 
-          <div className="card bg-base-100 shadow-md p-6 text-center">
-            <FaFileAlt className="text-4xl text-[#002060] mx-auto mb-4" />
-            <h3 className="font-bold text-lg mb-2 cooper">Documentation</h3>
-            <p className="text-gray-600 text-sm ">
-              Professional assistance with all required documents, ensuring
-              accuracy and compliance.
-            </p>
-          </div>
+    <div className="card bg-base-100 shadow-md p-6 text-center flex flex-col items-center">
+      <FaFileAlt className="text-4xl text-[#002060] mb-4" />
+      <h3 className="font-bold text-lg mb-2 cooper">Documentation</h3>
+      <p className="text-gray-600 text-sm sm:text-base">
+        Professional assistance with all required documents, ensuring
+        accuracy and compliance.
+      </p>
+    </div>
 
-          <div className="card bg-base-100 shadow-md p-6 text-center">
-            <FaUserTie className="text-4xl text-[#002060] mx-auto mb-4" />
-            <h3 className="font-bold text-lg mb-2 cooper"> Pre-Departure Support</h3>
-            <p className="text-gray-600 text-sm">
-              The final step ensures you are fully prepared for your transition
-              and arrival in your new country.
-            </p>
-          </div>
-        </div>
-      </div>
+    <div className="card bg-base-100 shadow-md p-6 text-center flex flex-col items-center">
+      <FaUserTie className="text-4xl text-[#002060] mb-4" />
+      <h3 className="font-bold text-lg mb-2 cooper">Pre-Departure Support</h3>
+      <p className="text-gray-600 text-sm sm:text-base">
+        The final step ensures you are fully prepared for your transition
+        and arrival in your new country.
+      </p>
+    </div>
+  </div>
+</div>
+
 
       {/* Why Choose NSEC Global? */}
       <div>
